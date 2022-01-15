@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import com.airbnb.lottie.LottieAnimationView
 import com.coderlytics.apexblogger.R
 
-class OnboardingFragment4 : Fragment() {
+class OnboardingFragment : Fragment() {
     private lateinit var title: String
     private lateinit var description: String
     private var imageResource = 0
@@ -51,8 +51,8 @@ class OnboardingFragment4 : Fragment() {
             title: String?,
             description: String?,
             imageResource: Int
-        ): OnboardingFragment4 {
-            val fragment = OnboardingFragment4()
+        ): OnboardingFragment {
+            val fragment = OnboardingFragment()
             val args = Bundle()
             args.putString(ARG_PARAM1, title)
             args.putString(ARG_PARAM2, description)

@@ -1,5 +1,6 @@
 package com.coderlytics.apexblogger.ui.activities
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -39,6 +40,8 @@ class OnboardingExample4Activity : AppCompatActivity() {
 
         btnNext.setOnClickListener {
             if (getItem() > mViewPager.childCount) {
+                startActivity(Intent(this
+                ,HomeActivity::class.java))
                 finish()
             } else {
                 mViewPager.setCurrentItem(getItem() + 1, true)

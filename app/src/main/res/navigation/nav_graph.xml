@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragments">
+
+
+    <fragment
+        android:id="@+id/homeFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.HomeFragments"
+        android:label="HomeFragments" />
+    <fragment
+        android:id="@+id/categoriesFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.CategoriesFragments"
+        android:label="CategoriesFragments" />
+    <fragment
+        android:id="@+id/bookmarksFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.BookmarksFragments"
+        android:label="BookmarksFragments" />
+    <fragment
+        android:id="@+id/popularFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.PopularFragments"
+        android:label="PopularFragments" />
+    <fragment
+        android:id="@+id/profileFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.ProfileFragments"
+        android:label="ProfileFragments" />
+    <fragment
+        android:id="@+id/searchFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.SearchFragments"
+        android:label="SearchFragments" />
+    <fragment
+        android:id="@+id/settingsFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.SettingsFragments"
+        android:label="SettingsFragments" />
+    <fragment
+        android:id="@+id/writeArticleFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.WriteArticleFragments"
+        android:label="WriteArticleFragments" />
+
+</navigation>
