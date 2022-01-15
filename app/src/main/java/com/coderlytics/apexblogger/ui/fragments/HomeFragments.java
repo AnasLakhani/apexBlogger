@@ -9,7 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.coderlytics.apexblogger.adapters.CategoryTopAdapter;
 import com.coderlytics.apexblogger.databinding.FragmentsHomeBinding;
+import com.coderlytics.apexblogger.model.CategoriesResponse;
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
 
 public class HomeFragments extends Fragment {
 
@@ -19,7 +24,29 @@ public class HomeFragments extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentsHomeBinding.inflate(inflater, container, false);
-        binding.txt.setText("FragmentsHomeBinding");
+
+
+        ArrayList<CategoriesResponse> responses = new ArrayList<>();
+
+        responses.add(new CategoriesResponse("0","Newest"));
+        responses.add(new CategoriesResponse("1","Popular"));
+        responses.add(new CategoriesResponse("2","Trending"));
+
+        CategoryTopAdapter pagerAdapter =
+                new CategoryTopAdapter(getChildFragmentManager(), responses, requireContext(),true);
+        binding.viewpager.setAdapter(pagerAdapter);
+        binding.viewpager.setOffscreenPageLimit(responses.size());
+
+        binding.tabLayout.setupWithViewPager(binding.viewpager);
+
+        // Iterate over all tabs and set the custom view
+        for (int i = 0; i < binding.tabLayout.getTabCount(); i++) {
+            TabLayout.Tab tab = binding.tabLayout.getTabAt(i);
+            assert tab != null;
+            tab.setCustomView(pagerAdapter.getTabView(i));
+        }
+
+
         return binding.getRoot();
     }
 }
