@@ -3,27 +3,27 @@
 
     <item
         android:id="@+id/homeFragments"
-        android:icon="@drawable/home"
+        android:icon="@drawable/home_feather_icon"
         android:title="Home" />
 
     <item
         android:id="@+id/categoriesFragments"
-        android:icon="@drawable/challenges"
+        android:icon="@drawable/category_icon"
         android:title="Categories" />
 
     <item
         android:id="@+id/writeArticleFragments"
-        android:icon="@drawable/store"
+        android:icon="@drawable/plus_icon"
         android:title="Add" />
 
     <item
         android:id="@+id/searchFragments"
-        android:icon="@drawable/wallet"
+        android:icon="@drawable/search_icon"
         android:title="Search" />
 
     <item
         android:id="@+id/menu"
-        android:icon="@drawable/profile"
+        android:icon="@drawable/hamburger_icon_3"
         android:title="Menu" />
 
 

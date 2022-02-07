@@ -49,11 +49,9 @@ class OnboardingExample4Activity : AppCompatActivity() {
         }
 
         btnBack.setOnClickListener {
-            if (getItem() == 0) {
-                finish()
-            } else {
-                mViewPager.setCurrentItem(getItem() - 1, true)
-            }
+            startActivity(Intent(this
+                ,HomeActivity::class.java))
+            finish()
         }
     }
 

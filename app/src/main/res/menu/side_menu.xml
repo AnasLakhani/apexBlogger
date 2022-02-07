@@ -3,35 +3,35 @@
 
     <item
         android:id="@+id/homeFragments"
-        android:icon="@drawable/home"
+        android:icon="@drawable/home_icon"
         android:title="Home" />
 
     <item
         android:id="@+id/categoriesFragments"
-        android:icon="@drawable/challenges"
+        android:icon="@drawable/category_icon"
         android:title="Categories" />
 
     <item
         android:id="@+id/bookmarksFragments"
-        android:icon="@drawable/store"
+        android:icon="@drawable/book_mark_icon"
         android:title="Bookmarks" />
 
     <item
         android:id="@+id/writeArticleFragments"
-        android:icon="@drawable/wallet"
+        android:icon="@drawable/edit_icon"
         android:title="Write Articles" />
     <item
         android:id="@+id/popularFragments"
-        android:icon="@drawable/wallet"
+        android:icon="@drawable/profile"
         android:title="Popular" />
 
     <item
         android:id="@+id/profileFragments"
-        android:icon="@drawable/wallet"
+        android:icon="@drawable/profile_icon"
         android:title="Profile" />
     <item
         android:id="@+id/settingsFragments"
-        android:icon="@drawable/wallet"
+        android:icon="@drawable/setting_icon"
         android:title="Setting" />
 
 </menu>

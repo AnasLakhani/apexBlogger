@@ -5,7 +5,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="fontFamily">@font/poppins_semibold</item>
 <!--        <item name="android:windowBackground">@drawable/splash</item>-->
 <!--        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>-->
 <!--        <item name="snackbarStyle">@style/MySnackBarStyle</item>-->

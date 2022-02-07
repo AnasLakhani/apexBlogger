@@ -25,7 +25,7 @@ public class BlogsFragmnets extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentsBlogsBinding.inflate(inflater, container, false);
-        binding.txt.setText(s);
+//        binding.txt.setText(s);
         return binding.getRoot();
     }
 }

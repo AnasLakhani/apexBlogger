@@ -18,17 +18,17 @@ class OnboardingViewPagerAdapter4(
             0 -> OnboardingFragment.newInstance(
                 context.resources.getString(R.string.title_onboarding_1),
                 context.resources.getString(R.string.description_onboarding_1),
-                R.raw.lottie_delivery_boy_bumpy_ride
+                R.drawable.onboarding_screen_1
             )
             1 -> OnboardingFragment.newInstance(
                 context.resources.getString(R.string.title_onboarding_2),
                 context.resources.getString(R.string.description_onboarding_2),
-                R.raw.lottie_developer
+                R.drawable.onboarding_screen_2
             )
             else -> OnboardingFragment.newInstance(
                 context.resources.getString(R.string.title_onboarding_3),
                 context.resources.getString(R.string.description_onboarding_3),
-                R.raw.lottie_girl_with_a_notebook
+                R.drawable.onboarding_screen_3
             )
         }
     }

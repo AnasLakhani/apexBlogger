@@ -18,6 +18,7 @@
     <dimen name="spacing_mlarge">20sp</dimen>
     <dimen name="spacing_xlarge">35sp</dimen>
     <dimen name="spacing_xxlarge">50sp</dimen>
+    <dimen name="spacing_xxxlarge">60sp</dimen>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="nav_header_height">176dp</dimen>
