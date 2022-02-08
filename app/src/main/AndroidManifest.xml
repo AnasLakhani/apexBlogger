@@ -23,7 +23,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
+          </activity>
         <activity android:name=".ui.activities.OnboardingExample4Activity"
             android:exported="true">
 
