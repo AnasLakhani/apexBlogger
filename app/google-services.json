@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "332885157893",
+    "project_id": "apexblogger-35114",
+    "storage_bucket": "apexblogger-35114.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332885157893:android:c6223b441eb5b5e655946c",
+        "android_client_info": {
+          "package_name": "com.coderlytics.apexblogger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332885157893-lkhelilcrmctechjgv5hedr24i38a4fe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.coderlytics.apexblogger",
+            "certificate_hash": "e471583fda85ed15c948524266c7675acc789233"
+          }
+        },
+        {
+          "client_id": "332885157893-uu834amb21m28s6lfncq879tgk10lq7k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCM-KhJKiv03nqNS9zNBM_BjhAxOcFUqo0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332885157893-uu834amb21m28s6lfncq879tgk10lq7k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
