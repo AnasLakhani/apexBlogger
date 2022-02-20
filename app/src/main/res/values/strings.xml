@@ -23,7 +23,16 @@ sadipscing elitr, sed diam nonumy eirmod</string>
     <string name="welcome_back">Welcome back</string>
     <string name="your_email">YOUR EMAIL</string>
     <string name="your_password">Your Password</string>
-    <string name="forgot_password">Forgot Password</string>
+    <string name="forgot_password">Forgot Password?</string>
     <string name="login">Login</string>
     <string name="continue_as_guest">Continue as guest</string>
+    <string name="name_of_user">Name of User</string>
+    <string name="location">Location</string>
+    <string name="followers">Followers</string>
+    <string name="_99">99</string>
+    <string name="following">Following</string>
+    <string name="collection">Collection</string>
+    <string name="my_articles">My articles</string>
+    <string name="todo">TODO</string>
+    <string name="login_with_google">Login with google</string>
 </resources>
