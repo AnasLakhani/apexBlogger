@@ -1,11 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ui.activities.LoginActivity">
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ui.activities.SignupActivity">
 
-    
+<TextView
+    android:id="@+id/login"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="100dp"
+    android:text="@string/login"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-</LinearLayout>
+<TextView
+    android:id="@+id/welcome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/welcome_back"
+    android:layout_marginTop="60dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/login" />
+
+<TextView
+    android:id="@+id/email_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_marginTop="8dp"
+    android:text="@string/your_email"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+<EditText
+    android:id="@+id/email_field"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="24dp"
+    android:hint="@string/your_email"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/email_tag"
+    app:layout_constraintTop_toBottomOf="@+id/email_tag"
+    android:autofillHints=""
+    android:inputType="textEmailAddress" />
+
+
+<TextView
+    android:id="@+id/pass_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:text="@string/your_password"
+    app:layout_constraintStart_toStartOf="@+id/email_tag"
+    app:layout_constraintTop_toBottomOf="@+id/email_field" />
+
+<EditText
+    android:id="@+id/pass_field"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:layout_marginEnd="24dp"
+    android:hint="@string/your_password"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/pass_tag"
+    app:layout_constraintTop_toBottomOf="@+id/pass_tag"
+    android:inputType="textPassword"
+    android:autofillHints="" />
+
+<TextView
+    android:id="@+id/forgot_pass"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:text="@string/forgot_password"
+    app:layout_constraintEnd_toEndOf="@+id/pass_field"
+    app:layout_constraintTop_toBottomOf="@+id/pass_field" />
+
+<Button
+    android:id="@+id/login_btn"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="20dp"
+    android:text="@string/login"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/forgot_pass" />
+
+<Button
+    android:id="@+id/guest_btn"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:text="@string/continue_as_guest"
+    app:layout_constraintEnd_toEndOf="@+id/login_btn"
+    app:layout_constraintStart_toStartOf="@+id/login_btn"
+    app:layout_constraintTop_toBottomOf="@+id/login_btn" />
+
+<Button
+    android:id="@+id/google_btn"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="24dp"
+    android:text="@string/continue_as_guest"
+    app:layout_constraintEnd_toEndOf="@+id/login_btn"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="@+id/login_btn"
+    app:layout_constraintTop_toBottomOf="@+id/guest_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

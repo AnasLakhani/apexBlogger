@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_signup.xml" value="0.209375" />
+        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_splash.xml" value="0.18297101449275363" />
         <entry key="app/src/main/res/drawable/blue_drawable.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/drawable/bottom_nav_icon_color_selector.xml" value="0.13645833333333332" />
         <entry key="app/src/main/res/drawable/btn_grey_rounded_normal.xml" value="0.2553846153846154" />
@@ -24,7 +27,6 @@
         <entry key="app/src/main/res/drawable/tab_text_color_selector.xml" value="0.15833333333333333" />
         <entry key="app/src/main/res/drawable/unselected_tab.xml" value="0.15833333333333333" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.24322916666666666" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22395833333333334" />
         <entry key="app/src/main/res/layout/activity_onboarding_example4.xml" value="0.24322916666666666" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.23802083333333332" />

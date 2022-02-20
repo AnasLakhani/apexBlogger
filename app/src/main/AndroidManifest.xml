@@ -10,11 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ui.activities.SignupActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activities.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.HomeActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".ui.activities.SplashActivity"
             android:exported="true">
@@ -26,7 +29,7 @@
         </activity>
         <activity
             android:name=".ui.activities.OnboardingExample4Activity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
