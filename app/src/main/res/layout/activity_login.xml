@@ -40,10 +40,10 @@ tools:context=".ui.activities.SignupActivity">
 
 <EditText
     android:id="@+id/email_field"
+    android:background="@drawable/shapes_edittext"
+    android:padding="12dp"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-
-
     android:layout_marginTop="12dp"
     android:layout_marginEnd="12dp"
     android:hint="@string/your_email"
@@ -68,6 +68,8 @@ tools:context=".ui.activities.SignupActivity">
         android:id="@+id/pass_field"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/shapes_edittext"
+        android:padding="12dp"
         android:layout_marginTop="12dp"
         android:autofillHints=""
         android:hint="@string/your_password"
@@ -87,9 +89,9 @@ tools:context=".ui.activities.SignupActivity">
 
 <Button
     android:id="@+id/login_btn"
+    android:background="@drawable/shapes_button"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-
     android:layout_marginStart="12dp"
     android:layout_marginTop="12dp"
     android:layout_marginEnd="12dp"
@@ -101,6 +103,7 @@ tools:context=".ui.activities.SignupActivity">
 
 <Button
     android:id="@+id/guest_btn"
+    android:background="@drawable/shapes_button_outline"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="12dp"
@@ -111,6 +114,7 @@ tools:context=".ui.activities.SignupActivity">
 
 <Button
     android:id="@+id/google_btn"
+    android:background="@drawable/shapes_button_outline"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     android:layout_marginTop="12dp"

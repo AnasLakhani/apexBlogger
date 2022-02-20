@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/drawable-v24/shapes_button.xml" value="0.207" />
+        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/drawable-v24/shapes_button_outline.xml" value="0.207" />
+        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/drawable/shapes.xml" value="0.207" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_signup.xml" value="0.209375" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_splash.xml" value="0.18297101449275363" />
