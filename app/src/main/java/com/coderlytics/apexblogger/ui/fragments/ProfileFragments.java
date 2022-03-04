@@ -20,7 +20,8 @@ public class ProfileFragments extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentsProfileBinding.inflate(inflater, container, false);
-        binding.txt.setText("FragmentsProfileBinding");
+
+//        binding.txt.setText("FragmentsProfileBinding");
         return binding.getRoot();
     }
 }

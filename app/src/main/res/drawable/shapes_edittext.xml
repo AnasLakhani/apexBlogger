@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item>
-        <shape android:shape="rectangle">
-            <solid android:color="#ffffff"/>
+    <item tools:ignore="StateListReachable">
+        <shape android:shape="rectangle" >
+            <size android:height="20dp" />
+            <solid android:color="#d8d8d8" />
+            <corners android:radius="5dp" />
+        </shape>
+    </item>
 
-            <corners android:radius="10dp" />
-            <stroke
-                android:width="2dp"
-                android:color="@color/cardview_dark_background"
-                />
+    <item >
+        <shape android:shape="rectangle" >
+            <size android:height="20dp" />
+            <solid android:color="#ecf0f1" />
+            <corners android:radius="5dp" />
+
         </shape>
     </item>
 </selector>

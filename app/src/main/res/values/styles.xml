@@ -32,4 +32,11 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+
+<!--    <style name="button_icon">-->
+<!--        <item name="drawableEndCompat">@drawable/book_mark_icon</item>-->
+<!--        <item name="android:width">12dp</item>-->
+<!--        <item name="android:height">12dp</item>-->
+<!--    </style >-->
+
 </resources>

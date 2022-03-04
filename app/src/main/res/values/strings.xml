@@ -33,6 +33,24 @@ sadipscing elitr, sed diam nonumy eirmod</string>
     <string name="following">Following</string>
     <string name="collection">Collection</string>
     <string name="my_articles">My articles</string>
-    <string name="todo">TODO</string>
     <string name="login_with_google">Login with google</string>
+    <string name="label" />
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="your_name">YOUR NAME</string>
+    <string name="create_account">Create Account</string>
+    <string name="your_country">YOUR COUNTRY</string>
+    <string name="your_number">YOUR NUMBER</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="hire">Hire</string>
+    <string name="todo">TODO</string>
+    <string name="search">search</string>
+    <string name="account">Account</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="privacy">Privacy</string>
+    <string name="content">Content</string>
+    <string name="about">About</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="textview">TextView</string>
 </resources>

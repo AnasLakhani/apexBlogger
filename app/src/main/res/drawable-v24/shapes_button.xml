@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<selector xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android" tools:ignore="StateListReachable">
+    <item tools:ignore="ExtraText">
 
-    <item>
+
         <shape android:shape="rectangle">
-            <solid android:color="#FF4641"/>
+
+
+            <solid android:color="@color/ff4641"/>
             
             <corners android:radius="30dp" />
         </shape>

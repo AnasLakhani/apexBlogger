@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/feather_camera_icon"
+        android:contentDescription="@string/todo" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="12dp"
+        android:hint="@string/your_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/your_email"
+        app:layout_constraintEnd_toEndOf="@+id/name_field"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name_field"
+        app:layout_constraintTop_toBottomOf="@+id/name_field">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/pass_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/your_password"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="@+id/email_field"
+        app:layout_constraintStart_toStartOf="@+id/email_field"
+        app:layout_constraintTop_toBottomOf="@+id/email_field">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="textPassword"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/country_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:hint="@string/your_country"
+        app:layout_constraintEnd_toEndOf="@+id/pass_field"
+        app:layout_constraintStart_toStartOf="@+id/pass_field"
+        app:layout_constraintTop_toBottomOf="@+id/pass_field">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/number_field"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:hint="@string/your_number"
+        app:layout_constraintEnd_toEndOf="@+id/country_field"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/country_field"
+        app:layout_constraintTop_toBottomOf="@+id/country_field">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/shapes_button_outline"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/cancel"
+        android:textColor="@color/ff4641"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/number_field" />
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/shapes_button"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:text="@string/save"
+        android:textColor="@color/md_white_1000"
+        app:layout_constraintBottom_toBottomOf="@+id/cancel_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cancel_btn" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
