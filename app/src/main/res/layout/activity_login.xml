@@ -76,7 +76,7 @@ tools:context=".ui.activities.SignupActivity">
 
     <Button
         android:textColor="@color/md_white_1000"
-        android:drawableEnd="@drawable/login_dash"
+        android:drawableEnd="@drawable/arrow_button"
     android:id="@+id/login_btn"
     android:background="@drawable/shapes_button"
     android:layout_width="0dp"

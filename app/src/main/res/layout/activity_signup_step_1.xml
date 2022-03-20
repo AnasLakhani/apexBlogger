@@ -115,7 +115,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="12dp"
         android:background="@drawable/shapes_button"
-        android:drawableEnd="@drawable/login_dash"
+        android:drawableEnd="@drawable/arrow_button"
         android:text="@string/create_account"
         android:textColor="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
