@@ -20,7 +20,7 @@ public class SettingsFragments extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentsSettingsBinding.inflate(inflater, container, false);
-        binding.txt.setText("FragmentsSettingsBinding");
+        binding.aboutText.setText("FragmentsSettingsBinding");
         return binding.getRoot();
     }
 }

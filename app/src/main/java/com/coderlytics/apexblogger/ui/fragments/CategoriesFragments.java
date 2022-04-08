@@ -20,7 +20,7 @@ public class CategoriesFragments extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentsCategoriesBinding.inflate(inflater, container, false);
-        binding.txt.setText("FragmentsBookmarksBinding");
+        binding.textView30.setText("FragmentsBookmarksBinding");
         return binding.getRoot();
     }
 }

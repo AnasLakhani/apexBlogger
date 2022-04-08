@@ -19,7 +19,7 @@ public class WriteArticleFragments extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentsWriteArticlesBinding.inflate(inflater, container, false);
-        binding.txt.setText("FragmentsWriteArticlesBinding");
+        binding.textView25.setText("FragmentsWriteArticlesBinding");
         return binding.getRoot();
     }
 }

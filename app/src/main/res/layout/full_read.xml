@@ -68,7 +68,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3"
-        app:srcCompat="@drawable/share_icon"
+        app:srcCompat="@drawable/share_icon_code"
         android:contentDescription="@string/todo" />
 
     <ImageView

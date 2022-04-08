@@ -20,7 +20,7 @@ public class SearchFragments extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentsSearchBinding.inflate(inflater, container, false);
-        binding.txt.setText("FragmentsSearchBinding");
+        binding.textView25.setText("FragmentsSearchBinding");
         return binding.getRoot();
     }
 }
