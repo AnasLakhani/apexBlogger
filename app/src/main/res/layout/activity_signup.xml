@@ -22,8 +22,8 @@
         style="@style/heading_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/create_account"
         android:layout_marginTop="12dp"
+        android:text="@string/create_account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_login" />
@@ -44,7 +44,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:id="@+id/name"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -63,7 +64,8 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:id="@+id/email"/>
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -78,9 +80,10 @@
         app:layout_constraintTop_toBottomOf="@+id/email_field">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass"
             android:layout_width="match_parent"
-            android:inputType="textPassword"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -94,33 +97,33 @@
         app:layout_constraintTop_toBottomOf="@+id/pass_field" />
 
     <Button
-        android:textColor="@color/md_white_1000"
-        android:drawableEnd="@drawable/login_dash"
+        android:onClick="onSignUpClick"
         android:id="@+id/login_btn"
-        android:background="@drawable/shapes_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:text="@string/login"
+        android:background="@drawable/shapes_button"
+        android:drawableEnd="@drawable/login_dash"
+        android:text="@string/sign_up"
+        android:textColor="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgot_pass" />
 
     <Button
-        android:textColor="@color/ff4641"
         android:id="@+id/guest_btn"
-        android:background="@drawable/shapes_button_outline"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
+        android:background="@drawable/shapes_button_outline"
         android:text="@string/continue_as_guest"
+        android:textColor="@color/ff4641"
         app:layout_constraintEnd_toEndOf="@+id/login_btn"
         app:layout_constraintStart_toStartOf="@+id/login_btn"
         app:layout_constraintTop_toBottomOf="@+id/login_btn" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
