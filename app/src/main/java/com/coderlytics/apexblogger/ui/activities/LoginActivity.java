@@ -63,17 +63,14 @@ public class LoginActivity extends AppCompatActivity {
         loading_dialog.show();
 
         auth.signInWithEmailAndPassword(email, pass).
-                addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
+                addOnCompleteListener(task -> {
 
-                        loading_dialog.dismiss();
-                        if (task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, "Authentication Success", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-                        } else {
-                            Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
-                        }
+                    loading_dialog.dismiss();
+                    if (task.isSuccessful()) {
+                        Toast.makeText(LoginActivity.this, "Authentication Success", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                    } else {
+                        Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
                     }
                 });
 
@@ -83,5 +80,9 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
+        if (auth.getCurrentUser()!=null) {
+            startActivity(new Intent(this,HomeActivity.class));
+            finish();
+        }
     }
 }

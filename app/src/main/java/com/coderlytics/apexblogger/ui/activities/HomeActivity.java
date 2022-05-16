@@ -5,10 +5,12 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.NavigationUI;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.coderlytics.apexblogger.R;
 import com.coderlytics.apexblogger.databinding.ActivityHomeBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -29,6 +31,13 @@ public class HomeActivity extends AppCompatActivity {
 
         binding.aaa.bottom.getMenu().findItem(R.id.menu).setOnMenuItemClickListener(menuItem -> {
             binding.drawerLayout.open();
+            return true;
+        });
+
+        binding.navView.getMenu().findItem(R.id.logout).setOnMenuItemClickListener(m -> {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(this,LoginActivity.class));
+            finish();
             return true;
         });
 

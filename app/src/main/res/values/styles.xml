@@ -24,6 +24,13 @@
         <item name="textAllCaps">true</item>
         <item name="fontFamily">@font/raleway_bold</item>
         <item name="android:textColor">@color/cardview_dark_background</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="EditText.Grey" parent="@style/AppTheme">
+        <item name="colorControlActivated">@color/grey_60</item>
+        <item name="colorControlHighlight">@color/grey_60</item>
+        <item name="colorControlNormal">@color/grey_40</item>
     </style>
 
     <style name="heading_2">
