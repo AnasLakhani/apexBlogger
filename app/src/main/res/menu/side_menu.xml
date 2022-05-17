@@ -33,5 +33,9 @@
         android:id="@+id/settingsFragments"
         android:icon="@drawable/setting_icon"
         android:title="Setting" />
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/setting_icon"
+        android:title="Logout" />
 
 </menu>

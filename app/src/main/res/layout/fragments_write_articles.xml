@@ -1,29 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
 
     <TextView
         android:id="@+id/textView25"
+        style="@style/article_heading1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/article_heading1"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
         android:text="@string/new_article"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textView26"
+        android:id="@+id/et_title_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginStart="12dp"
         android:hint="@string/article_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView25"
@@ -31,6 +32,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
+            android:id="@+id/et_title"
             android:layout_height="wrap_content"
             android:inputType="text" />
 
@@ -38,44 +40,57 @@
 
     <TextView
         android:id="@+id/textView27"
+        style="@style/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/title"
         android:layout_marginTop="12dp"
         android:text="@string/tags"
-        app:layout_constraintStart_toStartOf="@+id/textView26"
-        app:layout_constraintTop_toBottomOf="@+id/textView26" />
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/et_title_parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_title_parent" />
 
     <TextView
         android:id="@+id/textView28"
+        style="@style/article_heading2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/article_heading2"
         android:layout_marginTop="12dp"
         android:text="@string/article_content"
+        android:visibility="gone"
         app:layout_constraintStart_toStartOf="@+id/textView27"
         app:layout_constraintTop_toBottomOf="@+id/textView27" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textView29"
+        android:id="@+id/et_articles_parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginStart="12dp"
         android:hint="@string/write_article"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView28"
-        app:layout_constraintTop_toBottomOf="@+id/textView28" >
+        app:layout_constraintTop_toBottomOf="@+id/textView28">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textMultiLine"
             android:gravity="top"
-            android:lines="12"/>
+            android:id="@+id/et_articles"
+            android:inputType="textMultiLine"
+            android:lines="12" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/addArticles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Articles"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_articles_parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,7 +51,7 @@ public class SignupActivity extends AppCompatActivity {
         String pass = String.valueOf(binding.pass.getText());
 
         if (name.isEmpty()) {
-            binding.nameField.setError("Enter name");
+            binding.nameField.setError("Enter Name");
             return;
         }
 
@@ -59,7 +59,7 @@ public class SignupActivity extends AppCompatActivity {
 
 
         if (email.isEmpty()) {
-            binding.emailField.setError("Enter email");
+            binding.emailField.setError("Enter Email");
             return;
         }
 
@@ -67,7 +67,7 @@ public class SignupActivity extends AppCompatActivity {
 
 
         if (pass.isEmpty()) {
-            binding.passField.setError("Enter pass");
+            binding.passField.setError("Enter Pass");
             return;
         }
 
@@ -116,8 +116,8 @@ public class SignupActivity extends AppCompatActivity {
 
             } else {
                 loading_dialog.dismiss();
-                Log.d(TAG, "onComplete: " + task.getException().toString());
-                Toast.makeText(SignupActivity.this, "You Can't register with this email or password", Toast.LENGTH_SHORT).show();
+                Log.d(TAG, "onComplete: " + task.getException().getLocalizedMessage());
+                Toast.makeText(SignupActivity.this, task.getException().getLocalizedMessage(), Toast.LENGTH_SHORT).show();
             }
 
         });
