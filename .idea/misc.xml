@@ -9,6 +9,7 @@
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/drawable/circle_shape.xml" value="0.2095" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/drawable/shapes.xml" value="0.207" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/drawable/shapes_edittext.xml" value="0.1005" />
+        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/about.xml" value="0.20615384615384616" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_home.xml" value="0.209375" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/activity_main.xml" value="0.209375" />
@@ -23,7 +24,7 @@
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/fragments_popular.xml" value="0.209375" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/fragments_profile.xml" value="0.33" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/fragments_search.xml" value="0.209375" />
-        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/fragments_settings.xml" value="0.209375" />
+        <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/fragments_settings.xml" value="0.25" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/fragments_write_articles.xml" value="0.209375" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/full_read.xml" value="0.25" />
         <entry key="..\:/Users/usman/StudioProjects/apexblogger_new/app/src/main/res/layout/home_article_card.xml" value="0.33" />
@@ -84,5 +85,8 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressKotlinCodeStyleNotification">
+    <option name="disableForAll" value="true" />
   </component>
 </project>

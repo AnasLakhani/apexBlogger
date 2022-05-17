@@ -87,31 +87,31 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:id="@+id/forgot_pass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="@string/forgot_password"
-        app:layout_constraintEnd_toEndOf="@+id/login_btn"
-        app:layout_constraintTop_toBottomOf="@+id/pass_field" />
+<!--    <TextView-->
+<!--        android:id="@+id/forgot_pass"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:text="@string/forgot_password"-->
+<!--        app:layout_constraintEnd_toEndOf="@+id/login_btn"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/pass_field" />-->
 
     <Button
-        android:onClick="onSignUpClick"
         android:id="@+id/login_btn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="12dp"
         android:background="@drawable/shapes_button"
         android:drawableEnd="@drawable/login_dash"
+        android:onClick="onSignUpClick"
         android:text="@string/sign_up"
         android:textColor="@color/md_white_1000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/forgot_pass" />
+        app:layout_constraintTop_toBottomOf="@+id/pass_field" />
 
     <Button
         android:id="@+id/guest_btn"
