@@ -39,6 +39,9 @@ sadipscing elitr, sed diam nonumy eirmod</string>
     <string name="sign_up">SIGN UP</string>
     <string name="your_user_name">Enter Username</string>
     <string name="your_name">Enter Name</string>
+    <string name="your_username">Enter Username</string>
+    <string name="your_first_name">Enter First Name</string>
+    <string name="your_last_name">Enter Last Name</string>
     <string name="create_account">Create Account</string>
     <string name="your_country">YOUR COUNTRY</string>
     <string name="your_number">YOUR NUMBER</string>
@@ -80,4 +83,5 @@ sadipscing elitr, sed diam nonumy eirmod</string>
     <string name="awarded_collection">Awarded Collection</string>
     <string name="international">International</string>
     <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
 </resources>

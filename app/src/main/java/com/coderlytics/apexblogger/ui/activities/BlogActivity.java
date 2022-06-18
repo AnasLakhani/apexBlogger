@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.coderlytics.apexblogger.adapters.BlogAdapter;
 import com.coderlytics.apexblogger.databinding.ActivityBlogBinding;
 import com.coderlytics.apexblogger.databinding.FragmentsBlogsBinding;
+import com.coderlytics.apexblogger.model.BlogCategoriesResponse;
+import com.coderlytics.apexblogger.model.BlogsResponse;
 import com.coderlytics.apexblogger.ui.fragments.PopularFragments;
 import com.coderlytics.apexblogger.utils.MyUtils;
 import com.google.android.material.snackbar.Snackbar;
@@ -112,6 +114,8 @@ public class BlogActivity extends AppCompatActivity implements BlogAdapter.OnIte
 
     @Override
     public void onReadClick(DocumentSnapshot documentSnapshot) {
+        BlogsResponse model = documentSnapshot.toObject(BlogsResponse.class);
+        MyUtils.share(binding.getRoot().getContext(),model.getTitle(),model.getContent());
 
     }
 

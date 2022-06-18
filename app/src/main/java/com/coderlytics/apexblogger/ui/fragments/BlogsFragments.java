@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.coderlytics.apexblogger.adapters.BlogAdapter;
 import com.coderlytics.apexblogger.adapters.CategoriesAdapter;
 import com.coderlytics.apexblogger.databinding.FragmentsBlogsBinding;
+import com.coderlytics.apexblogger.model.BlogsResponse;
 import com.coderlytics.apexblogger.utils.MyUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.CollectionReference;
@@ -114,7 +115,8 @@ public class BlogsFragments extends Fragment implements BlogAdapter.OnItemClickL
 
     @Override
     public void onReadClick(DocumentSnapshot documentSnapshot) {
-
+        BlogsResponse model = documentSnapshot.toObject(BlogsResponse.class);
+        MyUtils.share(binding.getRoot().getContext(),model.getTitle(),model.getContent());
     }
 
     @Override

@@ -53,14 +53,14 @@
         <entry key="app/src/main/res/drawable/tab_selector.xml" value="0.15833333333333333" />
         <entry key="app/src/main/res/drawable/tab_text_color_selector.xml" value="0.15833333333333333" />
         <entry key="app/src/main/res/drawable/unselected_tab.xml" value="0.15833333333333333" />
-        <entry key="app/src/main/res/layout/activity_account.xml" value="0.2671875" />
+        <entry key="app/src/main/res/layout/activity_account.xml" value="0.165" />
         <entry key="app/src/main/res/layout/activity_add_category.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_blog.xml" value="0.15555555555555556" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.21578063964843752" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.22395833333333334" />
         <entry key="app/src/main/res/layout/activity_onboarding_example4.xml" value="0.24322916666666666" />
-        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.2095728556315104" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.19802246093750003" />
         <entry key="app/src/main/res/layout/activity_splash.xml" value="0.23802083333333332" />
         <entry key="app/src/main/res/layout/content_home.xml" value="0.14719696787669986" />
         <entry key="app/src/main/res/layout/custom_spinner_items.xml" value="0.1171875" />
@@ -71,11 +71,11 @@
         <entry key="app/src/main/res/layout/fragments_categories.xml" value="0.2605316162109375" />
         <entry key="app/src/main/res/layout/fragments_home.xml" value="0.1203125" />
         <entry key="app/src/main/res/layout/fragments_popular.xml" value="0.1203125" />
-        <entry key="app/src/main/res/layout/fragments_profile.xml" value="0.28532562255859373" />
-        <entry key="app/src/main/res/layout/fragments_search.xml" value="0.3600814819335938" />
+        <entry key="app/src/main/res/layout/fragments_profile.xml" value="0.17679595947265622" />
+        <entry key="app/src/main/res/layout/fragments_search.xml" value="0.20111083984375" />
         <entry key="app/src/main/res/layout/fragments_settings.xml" value="0.19766998291015625" />
         <entry key="app/src/main/res/layout/fragments_write_articles.xml" value="0.2324005126953125" />
-        <entry key="app/src/main/res/layout/layout_blogs.xml" value="0.2541458129882812" />
+        <entry key="app/src/main/res/layout/layout_blogs.xml" value="0.19474487304687496" />
         <entry key="app/src/main/res/layout/layout_cateogries.xml" value="0.26614583333333336" />
         <entry key="app/src/main/res/layout/layout_loading_dialog.xml" value="0.3422053019205729" />
         <entry key="app/src/main/res/layout/layout_toolbar.xml" value="0.23958333333333334" />

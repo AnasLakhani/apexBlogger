@@ -47,6 +47,8 @@ public class SignupActivity extends AppCompatActivity {
 
     public void onSignUpClick(View view) {
         String name = String.valueOf(binding.name.getText());
+        String fName = String.valueOf(binding.fname.getText());
+        String lLast = String.valueOf(binding.lname.getText());
         String email = String.valueOf(binding.email.getText());
         String pass = String.valueOf(binding.pass.getText());
 
@@ -57,6 +59,19 @@ public class SignupActivity extends AppCompatActivity {
 
         binding.nameField.setError(null);
 
+        if (fName.isEmpty()) {
+            binding.fNameField.setError("Enter First Name");
+            return;
+        }
+
+        binding.fNameField.setError(null);
+
+        if (lLast.isEmpty()) {
+            binding.lNameField.setError("Enter Last Name");
+            return;
+        }
+
+        binding.lNameField.setError(null);
 
         if (email.isEmpty()) {
             binding.emailField.setError("Enter Email");
@@ -95,6 +110,8 @@ public class SignupActivity extends AppCompatActivity {
                 register_user.put("password", pass);
                 register_user.put("username", name);
                 register_user.put("phone", "phone");
+                register_user.put("first_name", fName);
+                register_user.put("last_name", lLast);
                 register_user.put("age", "age");
                 register_user.put("gender", "gender");
                 register_user.put("role", "user");

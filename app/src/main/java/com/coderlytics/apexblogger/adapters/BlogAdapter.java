@@ -105,7 +105,7 @@ public class BlogAdapter extends FirestoreAdapter<BlogAdapter.MyRecyclerViewHold
 
             Log.d(TAG, "bind: ");
 
-            binding.getRoot().setOnClickListener(new View.OnClickListener() {
+            binding.share.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (listener!=null) {

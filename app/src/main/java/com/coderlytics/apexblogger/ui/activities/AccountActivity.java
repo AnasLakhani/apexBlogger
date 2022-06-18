@@ -75,6 +75,8 @@ public class AccountActivity extends AppCompatActivity {
     private void onEditClicked() {
 
         String name = String.valueOf(binding.name.getText());
+        String fName = String.valueOf(binding.fName.getText());
+        String lLast = String.valueOf(binding.lName.getText());
         String email = String.valueOf(binding.email.getText());
         String phone = String.valueOf(binding.phone.getText());
         String gender = String.valueOf(binding.gender.getText());
@@ -87,6 +89,22 @@ public class AccountActivity extends AppCompatActivity {
         }
 
         binding.nameField.setError(null);
+
+        if (TextUtils.isEmpty(fName)) {
+            binding.fNameField.setError("Enter First Name");
+            binding.fName.requestFocus();
+            return;
+        }
+
+        binding.fNameField.setError(null);
+
+        if (TextUtils.isEmpty(lLast)) {
+            binding.lastNameField.setError("Enter Last Name");
+            binding.lName.requestFocus();
+            return;
+        }
+
+        binding.lastNameField.setError(null);
 
         if (TextUtils.isEmpty(email)) {
             binding.emailField.setError("Enter Email");
@@ -127,6 +145,8 @@ public class AccountActivity extends AppCompatActivity {
 
         register_user.put("email", email);
         register_user.put("username", name);
+        register_user.put("first_name", fName);
+        register_user.put("last_name", lLast);
         register_user.put("phone", phone);
         register_user.put("age", age);
         register_user.put("gender", gender);

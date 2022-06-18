@@ -29,7 +29,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_login" />
 
 
-
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name_field"
         android:layout_width="0dp"
@@ -43,31 +42,10 @@
         app:layout_constraintTop_toBottomOf="@+id/welcome">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:id="@+id/name"/>
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/name_field"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="12dp"
-        android:hint="@string/your_user_name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/welcome">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="text"
-            android:id="@+id/name"/>
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -83,10 +61,10 @@
         app:layout_constraintTop_toBottomOf="@+id/name_field">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:id="@+id/fname"/>
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -95,17 +73,17 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:hint="@string/first_name"
+        android:hint="@string/last_name"
         app:layout_constraintEnd_toEndOf="@+id/f_name_field"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/f_name_field"
         app:layout_constraintTop_toBottomOf="@+id/f_name_field">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lname"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:id="@+id/lname"/>
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -122,10 +100,10 @@
         app:layout_constraintTop_toBottomOf="@+id/l_name_field">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:id="@+id/email"/>
+            android:inputType="textEmailAddress" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -147,14 +125,14 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-<!--    <TextView-->
-<!--        android:id="@+id/forgot_pass"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:text="@string/forgot_password"-->
-<!--        app:layout_constraintEnd_toEndOf="@+id/login_btn"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/pass_field" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/forgot_pass"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:text="@string/forgot_password"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/login_btn"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/pass_field" />-->
 
     <Button
         android:id="@+id/login_btn"

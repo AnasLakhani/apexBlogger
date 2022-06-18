@@ -2,6 +2,7 @@ package com.coderlytics.apexblogger.utils;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.PorterDuff;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -40,10 +41,26 @@ public class MyUtils {
         return dialogBuilder.create();
     }
 
+    public static void share(Context activity, String subject, String body) {
+        /*Create an ACTION_SEND Intent*/
+
+        Activity activity1 = (Activity) activity;
+
+        Intent intent = new Intent(android.content.Intent.ACTION_SEND);
+        /*This will be the actual content you wish you share.*/
+        String shareBody = "Here is the share content body";
+        /*The type of the content is text, obviously.*/
+        intent.setType("text/plain");
+        /*Applying information Subject and Body.*/
+        intent.putExtra(android.content.Intent.EXTRA_SUBJECT, subject);
+        intent.putExtra(android.content.Intent.EXTRA_TEXT, body);
+        /*Fire!*/
+        activity1.startActivity(Intent.createChooser(intent, "Share Using"));
+    }
+
     @BindingAdapter({"avatar"})
     public static void requestOptions(ImageView imageView, String imageid) {
         Context context = imageView.getContext();
-
 
 
         if (imageid == null) {

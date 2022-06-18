@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import com.bumptech.glide.Glide;
 import com.coderlytics.apexblogger.R;
@@ -145,7 +146,6 @@ public class WriteArticleFragments extends Fragment {
             return;
         }
 
-
         loading_dialog.show();
 
         if (image_uri == null) {
@@ -205,6 +205,8 @@ public class WriteArticleFragments extends Fragment {
                     loading_dialog.dismiss();
 //                    Log.d(TAG, "onSuccess: get id " + documentReference);
                     Toast.makeText(context, "Success!", Toast.LENGTH_SHORT).show();
+
+                    Navigation.findNavController(binding.getRoot()).popBackStack();
 //                    startActivity(new Intent(this, AdminBlogs.class));
 //                    finish();
 

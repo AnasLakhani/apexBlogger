@@ -1,5 +1,8 @@
 package com.coderlytics.apexblogger.ui.activities;
 
+import static android.view.View.GONE;
+import static android.view.View.VISIBLE;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -12,6 +15,7 @@ import android.widget.TextView;
 
 import com.coderlytics.apexblogger.R;
 import com.coderlytics.apexblogger.databinding.ActivityHomeBinding;
+import com.coderlytics.apexblogger.utils.KeyboardUtils;
 import com.coderlytics.apexblogger.utils.MyUtils;
 import com.coderlytics.apexblogger.utils.SpHelper;
 import com.google.firebase.auth.FirebaseAuth;
@@ -49,6 +53,9 @@ public class HomeActivity extends AppCompatActivity {
         ImageView imageView = binding.navView.getHeaderView(0).findViewById(R.id.imgLogo);
         MyUtils.requestOptions(imageView,SpHelper.getValue(this,SpHelper.IMAGEURL));
         textView.setText(SpHelper.getValue(this,SpHelper.USERNAME));
+
+        KeyboardUtils.addKeyboardToggleListener(this, isVisible -> binding.aaa.bottom.setVisibility(isVisible ? GONE : VISIBLE));
+
 
 
     }
