@@ -14,7 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activities.AddCategory"
+            android:name=".ui.activities.BlogActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.AccountActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.AddCategoryActivity"
             android:exported="false" />
         <activity
             android:name=".ui.activities.SignupActivity"

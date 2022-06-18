@@ -37,7 +37,8 @@ sadipscing elitr, sed diam nonumy eirmod</string>
     <string name="label" />
     <string name="don_t_have_an_account">Don\'t have an account?</string>
     <string name="sign_up">SIGN UP</string>
-    <string name="your_name">YOUR NAME</string>
+    <string name="your_user_name">Enter Username</string>
+    <string name="your_name">Enter Name</string>
     <string name="create_account">Create Account</string>
     <string name="your_country">YOUR COUNTRY</string>
     <string name="your_number">YOUR NUMBER</string>
@@ -49,7 +50,7 @@ sadipscing elitr, sed diam nonumy eirmod</string>
     <string name="edit_profile">Edit Profile</string>
     <string name="privacy">Privacy</string>
     <string name="content">Content</string>
-    <string name="about">About</string>
+    <string name="about">About Us</string>
     <string name="cancel">Cancel</string>
     <string name="save">Save</string>
     <string name="textview">TextView</string>
@@ -74,7 +75,6 @@ sadipscing elitr, sed diam nonumy eirmod</string>
     <string name="article_title">Article Title</string>
     <string name="tags">Add Tags</string>
     <string name="article_content">Article Content</string>
-    <string name="write_article">Write Article</string>
     <string name="choose_categories">Choose Categories</string>
     <string name="more">more</string>
     <string name="awarded_collection">Awarded Collection</string>

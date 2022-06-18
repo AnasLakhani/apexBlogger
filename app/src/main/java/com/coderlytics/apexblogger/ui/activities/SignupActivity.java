@@ -97,6 +97,7 @@ public class SignupActivity extends AppCompatActivity {
                 register_user.put("phone", "phone");
                 register_user.put("age", "age");
                 register_user.put("gender", "gender");
+                register_user.put("role", "user");
                 register_user.put("created_at", new Date());
                 register_user.put("updated_at", new Date());
                 register_user.put("imageURL", "default");

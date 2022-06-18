@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical">
 
 
-    <ImageView
+    <androidx.constraintlayout.utils.widget.ImageFilterView
         android:id="@+id/profile_img"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        app:roundPercent="1"
         android:layout_marginTop="44dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -117,26 +119,20 @@
         app:layout_constraintStart_toStartOf="@+id/follower_count_text"
         app:layout_constraintTop_toBottomOf="@+id/follower_text" />
 
-    <ImageView
-        android:id="@+id/grid_icon"
-        android:layout_width="30dp"
-        android:layout_height="13dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="@+id/list_icon"
-        app:layout_constraintEnd_toEndOf="@+id/collection_count_text"
-        app:layout_constraintTop_toTopOf="@+id/list_icon"
-        app:srcCompat="@drawable/arrow_pointing_left_icon" />
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="440dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/article_text">
 
-    <ImageView
-        android:id="@+id/list_icon"
-        android:layout_width="30dp"
-        android:layout_height="13dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/article_text"
-        app:layout_constraintEnd_toStartOf="@+id/grid_icon"
-        app:layout_constraintTop_toTopOf="@+id/article_text"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/arrow_pointing_left_icon"
-        android:contentDescription="@string/todo" />
+        <include
+            android:id="@+id/blogs"
+            layout="@layout/fragments_blogs"/>
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

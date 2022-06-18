@@ -44,11 +44,17 @@ public class MyUtils {
     public static void requestOptions(ImageView imageView, String imageid) {
         Context context = imageView.getContext();
 
+
+
         if (imageid == null) {
             return;
         }
 
         if (!imageid.contains(".")) {
+            return;
+        }
+
+        if (imageid.equals("default")) {
             return;
         }
 

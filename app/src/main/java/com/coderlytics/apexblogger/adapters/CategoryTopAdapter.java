@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.coderlytics.apexblogger.databinding.CustomTab2Binding;
 import com.coderlytics.apexblogger.model.CategoriesResponse;
-import com.coderlytics.apexblogger.ui.fragments.BlogsFragmnets;
+import com.coderlytics.apexblogger.ui.fragments.BlogsFragments;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -42,13 +42,13 @@ public class CategoryTopAdapter extends FragmentPagerAdapter {
         Fragment fragment;
         switch (position) {
             case 0:
-                fragment = new BlogsFragmnets("Newest");
+                fragment = new BlogsFragments("Newest");
                 break;
             case 1:
-                fragment = new BlogsFragmnets("Popular");
+                fragment = new BlogsFragments("Popular");
                 break;
             case 2:
-                fragment = new BlogsFragmnets("Trending");
+                fragment = new BlogsFragments("Trending");
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + position);
