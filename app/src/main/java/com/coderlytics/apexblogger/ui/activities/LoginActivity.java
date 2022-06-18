@@ -2,20 +2,21 @@ package com.coderlytics.apexblogger.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.coderlytics.apexblogger.databinding.ActivityLoginBinding;
+import com.coderlytics.apexblogger.model.UsersResponse;
 import com.coderlytics.apexblogger.utils.MyUtils;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import com.coderlytics.apexblogger.utils.SpHelper;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -24,6 +25,12 @@ public class LoginActivity extends AppCompatActivity {
     FirebaseAuth auth;
 
     AlertDialog loading_dialog;
+
+    DocumentReference docRef;
+
+    private final FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    private static final String TAG = "LoginActivity";
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -64,14 +71,51 @@ public class LoginActivity extends AppCompatActivity {
 
         auth.signInWithEmailAndPassword(email, pass).
                 addOnCompleteListener(task -> {
+                    if (!task.isSuccessful()) {
+                        loading_dialog.dismiss();
+                        return;
+                    }
 
-                    loading_dialog.dismiss();
-                    if (task.isSuccessful()) {
+                    docRef = db.collection("users").document(FirebaseAuth.getInstance().getCurrentUser().getUid());
+
+                    docRef.get().addOnSuccessListener(documentSnapshot -> {
+                        loading_dialog.dismiss();
+
+                        if (!documentSnapshot.exists()) {
+                            Log.d(TAG, "onSuccess: LIST EMPTY");
+                            return;
+                        }
+
+                        UsersResponse types = documentSnapshot.toObject(UsersResponse.class);
+
+                        if (types == null) return;
+                        String AGE = types.getAge();
+                        String EMAIL = types.getEmail();
+                        String GENDER = types.getGender();
+                        String IMAGEURL = types.getImageURL();
+                        String ID = types.getId();
+                        String PHONE = types.getPhone();
+                        String ROLE = types.getRole();
+                        String USERNAME = types.getUsername();
+
+                        SpHelper.makeLogin(LoginActivity.this, AGE,
+                                EMAIL,
+                                GENDER,
+                                IMAGEURL,
+                                ID,
+                                PHONE,
+                                ROLE,
+                                USERNAME);
+
                         Toast.makeText(LoginActivity.this, "Authentication Success", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
-                    } else {
-                        Toast.makeText(LoginActivity.this, "Authentication Failed", Toast.LENGTH_SHORT).show();
-                    }
+
+                    }).addOnFailureListener(e -> {
+                        loading_dialog.dismiss();
+                        Log.e(TAG, "onFailure: " + e.getLocalizedMessage());
+                        Toast.makeText(LoginActivity.this, "error", Toast.LENGTH_SHORT).show();
+                    });
+
                 });
 
 
@@ -80,8 +124,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        if (auth.getCurrentUser()!=null) {
-            startActivity(new Intent(this,HomeActivity.class));
+        if (auth.getCurrentUser() != null) {
+            startActivity(new Intent(this, HomeActivity.class));
             finish();
         }
     }

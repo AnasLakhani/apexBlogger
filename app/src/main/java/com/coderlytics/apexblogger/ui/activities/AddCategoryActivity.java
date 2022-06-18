@@ -5,7 +5,6 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -29,7 +28,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
-public class AddCategory extends AppCompatActivity {
+public class AddCategoryActivity extends AppCompatActivity {
 
     public static final int IMAGE_SELECT_CODE = 1001;
 
@@ -49,11 +48,14 @@ public class AddCategory extends AppCompatActivity {
 
     private static final String TAG = "AddCategory";
 
+    FirebaseAuth auth;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityAddCategoryBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        auth = FirebaseAuth.getInstance();
 
         db = FirebaseFirestore.getInstance();
         mStorageRef = FirebaseStorage.getInstance().getReference();
@@ -85,7 +87,6 @@ public class AddCategory extends AppCompatActivity {
         }
 
         loading_dialog.show();
-        loading_dialog.setMessage("please wait");
 
         mStorageRef.child("categories/" + UUID.randomUUID()).putFile(image_uri)
                 .addOnSuccessListener(taskSnapshot -> {
@@ -99,7 +100,7 @@ public class AddCategory extends AppCompatActivity {
                             .addOnFailureListener(e -> {
                                 loading_dialog.dismiss();
                                 if (e instanceof IOException)
-                                    Toast.makeText(AddCategory.this, "internet connection error", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(AddCategoryActivity.this, "internet connection error", Toast.LENGTH_SHORT).show();
                                 else
                                     Log.d(TAG, "onFailure: " + e.getLocalizedMessage());
                             });
@@ -107,7 +108,7 @@ public class AddCategory extends AppCompatActivity {
                 .addOnFailureListener(e -> {
                     loading_dialog.dismiss();
                     if (e instanceof IOException)
-                        Toast.makeText(AddCategory.this, "internet connection error", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AddCategoryActivity.this, "internet connection error", Toast.LENGTH_SHORT).show();
                     else
                         Log.d(TAG, "onFailure: " + e.getLocalizedMessage());
                 });
@@ -117,21 +118,25 @@ public class AddCategory extends AppCompatActivity {
 
     private void setdata(String links) {
 
+        String random_id = String.valueOf(UUID.randomUUID());
+
+        String user_id = auth.getCurrentUser().getUid();
+
         Map<String, Object> blog = new HashMap<>();
+        blog.put("id", random_id);
         blog.put("title", title);
         blog.put("image", links);
         blog.put("created_at", new Date());
-        blog.put("create_by", "Admin");
-        blog.put("updated_by", "Admin");
+        blog.put("create_by", user_id);
+        blog.put("updated_by", user_id);
         blog.put("updated_at", new Date());
 
         Log.d(TAG, "Title: " + title + "\n" + "Content: " + content + "links" + links);
 
-        db.collection("categories").add(blog)
+        db.collection("categories").document(random_id).set(blog)
                 .addOnSuccessListener(documentReference -> {
                     loading_dialog.dismiss();
-                    Log.d(TAG, "onSuccess: get id " + documentReference.getId());
-                    Toast.makeText(AddCategory.this, "Success!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(AddCategoryActivity.this, "Success!", Toast.LENGTH_SHORT).show();
 //                    startActivity(new Intent(this, AdminBlogs.class));
 //                    finish();
 

@@ -7,9 +7,13 @@ import androidx.navigation.ui.NavigationUI;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.coderlytics.apexblogger.R;
 import com.coderlytics.apexblogger.databinding.ActivityHomeBinding;
+import com.coderlytics.apexblogger.utils.MyUtils;
+import com.coderlytics.apexblogger.utils.SpHelper;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {
@@ -40,6 +44,12 @@ public class HomeActivity extends AppCompatActivity {
             finish();
             return true;
         });
+
+        TextView textView = binding.navView.getHeaderView(0).findViewById(R.id.tvTitle);
+        ImageView imageView = binding.navView.getHeaderView(0).findViewById(R.id.imgLogo);
+        MyUtils.requestOptions(imageView,SpHelper.getValue(this,SpHelper.IMAGEURL));
+        textView.setText(SpHelper.getValue(this,SpHelper.USERNAME));
+
 
     }
 }

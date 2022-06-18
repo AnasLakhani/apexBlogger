@@ -8,7 +8,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.coderlytics.apexblogger.databinding.LayoutCateogriesBinding;
-import com.coderlytics.apexblogger.interfaces.OnItemClickListener;
 import com.coderlytics.apexblogger.model.BlogCategoriesResponse;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.Query;
@@ -17,6 +16,12 @@ import com.google.firebase.firestore.Query;
 public class CategoriesAdapter extends FirestoreAdapter<CategoriesAdapter.MyRecyclerViewHolder> {
 
     private OnItemClickListener listener;
+
+
+    public interface OnItemClickListener {
+        void onReadClick(DocumentSnapshot documentSnapshot);
+
+    }
 
     protected CategoriesAdapter(Query query, OnItemClickListener listener) {
         super(query);
