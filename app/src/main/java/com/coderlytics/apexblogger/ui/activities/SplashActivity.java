@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.coderlytics.apexblogger.R;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -15,10 +17,15 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
+
+        FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+                .setPersistenceEnabled(false)
+                .build();
+//        dbEventHome.setFirestoreSettings(settings);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(SplashActivity.this,OnboardingExample4Activity.class));
+                startActivity(new Intent(SplashActivity.this,LoginActivity.class));
                 finish();
             }
         },3000);

@@ -56,6 +56,7 @@ public class BlogsFragments extends Fragment implements BlogAdapter.OnItemClickL
         loading_dialog = MyUtils.getLoadingDialog(activity);
 
         binding.swipeRefreshLayout.setOnRefreshListener(() -> {
+            setUpRecyclerView();
             adapter.startListening();
             binding.swipeRefreshLayout.setRefreshing(false);
         });
@@ -67,9 +68,9 @@ public class BlogsFragments extends Fragment implements BlogAdapter.OnItemClickL
 
     private void setUpRecyclerView() {
 
-        Query query = blogsRef.orderBy("created_at", Query.Direction.DESCENDING);
+        Query query = blogsRef.orderBy("updated_at", Query.Direction.DESCENDING);
 
-        adapter = new BlogAdapter(query, BlogsFragments.this) {
+        adapter = new BlogAdapter(query, BlogsFragments.this,false) {
 
             @Override
             protected void onDataChanged() {
@@ -103,6 +104,7 @@ public class BlogsFragments extends Fragment implements BlogAdapter.OnItemClickL
     @Override
     public void onStart() {
         super.onStart();
+        Log.d(TAG, "onStart: ");
         adapter.startListening();
     }
 
@@ -114,13 +116,23 @@ public class BlogsFragments extends Fragment implements BlogAdapter.OnItemClickL
 
 
     @Override
-    public void onReadClick(DocumentSnapshot documentSnapshot) {
+    public void onShareClick(DocumentSnapshot documentSnapshot) {
         BlogsResponse model = documentSnapshot.toObject(BlogsResponse.class);
         MyUtils.share(binding.getRoot().getContext(),model.getTitle(),model.getContent());
     }
 
     @Override
-    public void onItemClick(DocumentSnapshot documentSnapshot, View view) {
+    public void onEditClick(DocumentSnapshot documentSnapshot) {
+
+    }
+
+    @Override
+    public void onDeleteClick(DocumentSnapshot documentSnapshot) {
+
+    }
+
+    @Override
+    public void onItemClick(DocumentSnapshot documentSnapshot) {
 
     }
 }

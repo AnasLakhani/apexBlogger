@@ -40,6 +40,11 @@ public class SpHelper {
         return settings.getString(key, "");
     }
 
+    public static void setKey(Context context, String key, String value) {
+        context.getSharedPreferences(PREF_FILE, 0).edit().putString(key, value).apply();
+    }
+
+
     public static String getLocalToken(Context context) {
         SharedPreferences settings = context.getSharedPreferences(PREF_FILE, 0);
         return settings.getString(ACCESS_TOKEN, "");

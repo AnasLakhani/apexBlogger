@@ -28,9 +28,9 @@ public class HomeFragments extends Fragment {
 
         ArrayList<CategoriesResponse> responses = new ArrayList<>();
 
-        responses.add(new CategoriesResponse("0","Newest"));
-        responses.add(new CategoriesResponse("1","Popular"));
-        responses.add(new CategoriesResponse("2","Trending"));
+        responses.add(new CategoriesResponse("0","Blog Feed"));
+//        responses.add(new CategoriesResponse("1","Popular"));
+//        responses.add(new CategoriesResponse("2","Trending"));
 
         CategoryTopAdapter pagerAdapter =
                 new CategoryTopAdapter(getChildFragmentManager(), responses, requireContext(),true);
@@ -39,6 +39,7 @@ public class HomeFragments extends Fragment {
 
         binding.tabLayout.setupWithViewPager(binding.viewpager);
 
+//        binding.tabLayout.setVisibility(View.GONE);
         // Iterate over all tabs and set the custom view
         for (int i = 0; i < binding.tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = binding.tabLayout.getTabAt(i);

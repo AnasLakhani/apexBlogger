@@ -30,7 +30,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-import java.util.UUID;
 
 public class AccountActivity extends AppCompatActivity {
 
@@ -155,9 +154,8 @@ public class AccountActivity extends AppCompatActivity {
         if (image_uri != null) {
 
 
-
             mStorageRef.child("users/" + SpHelper.getValue(this
-                    ,SpHelper.ID)).putFile(image_uri)
+                            , SpHelper.ID)).putFile(image_uri)
 
                     .addOnSuccessListener(taskSnapshot -> {
                         Log.d(TAG, "onViewClicked: " + "photo upload");
@@ -167,6 +165,8 @@ public class AccountActivity extends AppCompatActivity {
 
                                 .addOnSuccessListener(uri -> {
                                     register_user.put("imageURL", uri.toString());
+                                    SpHelper.setKey(AccountActivity.this, SpHelper.IMAGEURL, uri.toString());
+                                    MyUtils.broadcast(AccountActivity.this, "Update");
                                     setData();
                                 })
                                 .addOnFailureListener(e -> {

@@ -65,7 +65,7 @@ public class PopularFragments extends Fragment implements BlogAdapter.OnItemClic
 
         Query query = blogsRef.orderBy("created_at", Query.Direction.DESCENDING);
 
-        adapter = new BlogAdapter(query, PopularFragments.this) {
+        adapter = new BlogAdapter(query, PopularFragments.this,false) {
 
             @Override
             protected void onDataChanged() {
@@ -110,13 +110,23 @@ public class PopularFragments extends Fragment implements BlogAdapter.OnItemClic
 
 
     @Override
-    public void onReadClick(DocumentSnapshot documentSnapshot) {
+    public void onShareClick(DocumentSnapshot documentSnapshot) {
         BlogsResponse model = documentSnapshot.toObject(BlogsResponse.class);
         MyUtils.share(binding.getRoot().getContext(),model.getTitle(),model.getContent());
     }
 
     @Override
-    public void onItemClick(DocumentSnapshot documentSnapshot, View view) {
+    public void onEditClick(DocumentSnapshot documentSnapshot) {
+
+    }
+
+    @Override
+    public void onDeleteClick(DocumentSnapshot documentSnapshot) {
+
+    }
+
+    @Override
+    public void onItemClick(DocumentSnapshot documentSnapshot) {
 
     }
 }

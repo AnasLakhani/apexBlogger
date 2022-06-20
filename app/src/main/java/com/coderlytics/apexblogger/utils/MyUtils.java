@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.PorterDuff;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.databinding.BindingAdapter;
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 
 import com.bumptech.glide.Glide;
@@ -57,6 +59,13 @@ public class MyUtils {
         /*Fire!*/
         activity1.startActivity(Intent.createChooser(intent, "Share Using"));
     }
+
+    public static void broadcast(Context context, String value) {
+        Intent intent = new Intent("mymsg");
+        if (!TextUtils.isEmpty(value)) intent.putExtra("aa", value);
+        LocalBroadcastManager.getInstance(context).sendBroadcast(intent);
+    }
+
 
     @BindingAdapter({"avatar"})
     public static void requestOptions(ImageView imageView, String imageid) {

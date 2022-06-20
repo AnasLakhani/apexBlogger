@@ -14,10 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.coderlytics.apexblogger.databinding.LayoutBlogsBinding;
-import com.coderlytics.apexblogger.databinding.LayoutCateogriesBinding;
-import com.coderlytics.apexblogger.model.BlogCategoriesResponse;
 import com.coderlytics.apexblogger.model.BlogsResponse;
-import com.coderlytics.apexblogger.utils.SpHelper;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -30,15 +27,24 @@ public class BlogAdapter extends FirestoreAdapter<BlogAdapter.MyRecyclerViewHold
 
     private final OnItemClickListener listener;
 
-    public interface OnItemClickListener {
-        void onReadClick(DocumentSnapshot documentSnapshot);
+    private boolean isProfile = false;
 
-        void onItemClick(DocumentSnapshot documentSnapshot, View view);
+    public interface OnItemClickListener {
+
+        void onShareClick(DocumentSnapshot documentSnapshot);
+
+        void onEditClick(DocumentSnapshot documentSnapshot);
+
+        void onDeleteClick(DocumentSnapshot documentSnapshot);
+
+        void onItemClick(DocumentSnapshot documentSnapshot);
+
     }
 
-    protected BlogAdapter(Query query, OnItemClickListener listener) {
+    protected BlogAdapter(Query query, OnItemClickListener listener,boolean isProfile) {
         super(query);
         this.listener = listener;
+        this.isProfile = isProfile;
     }
 
     @NonNull
@@ -50,7 +56,7 @@ public class BlogAdapter extends FirestoreAdapter<BlogAdapter.MyRecyclerViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyRecyclerViewHolder holder, int position) {
-        holder.bind(getSnapshot(position), listener);
+        holder.bind(getSnapshot(position), listener,isProfile);
 
     }
 
@@ -67,14 +73,16 @@ public class BlogAdapter extends FirestoreAdapter<BlogAdapter.MyRecyclerViewHold
         }
 
         void bind(final DocumentSnapshot snapshot,
-                  final OnItemClickListener listener) {
+                  final OnItemClickListener listener,boolean isProfile) {
 
             BlogsResponse model = snapshot.toObject(BlogsResponse.class);
             binding.setModel(model);
-
-
+            binding.setSnapshot(snapshot);
+            binding.setOnClick(listener);
+            binding.setIsProfile(isProfile);
             long update_date = model.getUpdated_at().toDate().getTime();
             String updated = DateUtils.getRelativeTimeSpanString(update_date).toString();
+            binding.setUpdated(updated);
 
 
             StorageReference mImageRef =
@@ -101,19 +109,9 @@ public class BlogAdapter extends FirestoreAdapter<BlogAdapter.MyRecyclerViewHold
                         }
                     });
 //            binding.setImage(image);
-            binding.setUpdated(updated);
+
 
             Log.d(TAG, "bind: ");
-
-            binding.share.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    if (listener!=null) {
-                        listener.onReadClick(snapshot);
-                    }
-                }
-            });
-
 
 
         }

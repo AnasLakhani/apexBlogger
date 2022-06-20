@@ -22,6 +22,7 @@
         android:icon="@drawable/edit_icon"
         android:title="Write Articles" />
     <item
+        android:visible="false"
         android:id="@+id/popularFragments"
         android:icon="@drawable/profile"
         android:title="Popular" />
@@ -36,7 +37,7 @@
         android:title="Setting" />
     <item
         android:id="@+id/logout"
-        android:icon="@drawable/setting_icon"
+        android:icon="@drawable/logout_icon"
         android:title="Logout" />
 
 </menu>

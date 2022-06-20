@@ -5,17 +5,15 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.coderlytics.apexblogger.adapters.BlogAdapter;
-import com.coderlytics.apexblogger.databinding.ActivityBlogBinding;
 import com.coderlytics.apexblogger.databinding.FragmentsBlogsBinding;
-import com.coderlytics.apexblogger.model.BlogCategoriesResponse;
 import com.coderlytics.apexblogger.model.BlogsResponse;
-import com.coderlytics.apexblogger.ui.fragments.PopularFragments;
 import com.coderlytics.apexblogger.utils.MyUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.CollectionReference;
@@ -68,7 +66,7 @@ public class BlogActivity extends AppCompatActivity implements BlogAdapter.OnIte
 
         Query query = blogsRef.orderBy("created_at", Query.Direction.DESCENDING).whereEqualTo("cat_id", id);
 
-        adapter = new BlogAdapter(query, BlogActivity.this) {
+        adapter = new BlogAdapter(query, BlogActivity.this,false) {
 
             @Override
             protected void onDataChanged() {
@@ -113,14 +111,24 @@ public class BlogActivity extends AppCompatActivity implements BlogAdapter.OnIte
 
 
     @Override
-    public void onReadClick(DocumentSnapshot documentSnapshot) {
+    public void onShareClick(DocumentSnapshot documentSnapshot) {
         BlogsResponse model = documentSnapshot.toObject(BlogsResponse.class);
         MyUtils.share(binding.getRoot().getContext(),model.getTitle(),model.getContent());
 
     }
 
     @Override
-    public void onItemClick(DocumentSnapshot documentSnapshot, View view) {
+    public void onEditClick(DocumentSnapshot documentSnapshot) {
+        Toast.makeText(context, "Edit", Toast.LENGTH_SHORT).show();
+    }
 
+    @Override
+    public void onDeleteClick(DocumentSnapshot documentSnapshot) {
+        Toast.makeText(context, "Delete", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onItemClick(DocumentSnapshot documentSnapshot) {
+        Toast.makeText(context, "Item Click", Toast.LENGTH_SHORT).show();
     }
 }
