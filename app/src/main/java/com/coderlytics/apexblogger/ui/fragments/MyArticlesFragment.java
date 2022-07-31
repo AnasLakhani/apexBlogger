@@ -46,7 +46,7 @@ import java.util.UUID;
 
 public class MyArticlesFragment extends Fragment implements BlogAdapter.OnItemClickListener {
 
-    FragmentsProfileBinding binding;
+    FragmentsWriteArticlesBinding binding;
 
     public static final int IMAGE_SELECT_CODE = 1001;
 
@@ -70,7 +70,7 @@ public class MyArticlesFragment extends Fragment implements BlogAdapter.OnItemCl
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = FragmentsProfileBinding.inflate(inflater, container, false);
+        binding = FragmentsWriteArticlesBinding.inflate(inflater, container, false);
         context = binding.getRoot().getContext();
         bottomSheetDialog = new BottomSheetDialog(context);
         MyUtils.requestOptions(binding.profileImg, SpHelper.getValue(context, SpHelper.IMAGEURL));
