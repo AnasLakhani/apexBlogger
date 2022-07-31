@@ -44,7 +44,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
-public class ProfileFragments extends Fragment implements BlogAdapter.OnItemClickListener {
+public class MyArticlesFragment extends Fragment implements BlogAdapter.OnItemClickListener {
 
     FragmentsProfileBinding binding;
 
@@ -94,7 +94,7 @@ public class ProfileFragments extends Fragment implements BlogAdapter.OnItemClic
 
         Query query = blogsRef.orderBy("created_at", Query.Direction.DESCENDING).whereEqualTo("updated_by", SpHelper.getValue(context, SpHelper.ID));
 
-        adapter = new BlogAdapter(query, ProfileFragments.this,true) {
+        adapter = new BlogAdapter(query, MyArticlesFragment.this,true) {
 
             @Override
             protected void onDataChanged() {

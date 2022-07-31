@@ -18,6 +18,9 @@ public class SpHelper {
     public static final String PHONE = "PHONE";
     public static final String ROLE = "ROLE";
     public static final String USERNAME = "USERNAME";
+    public final static String TERM_AND_CONDITION_URL = "TERM_AND_CONDITION_URL";
+    public final static String PRIVACY_POLICY_URL = "PRIVACY_POLICY_URL";
+
 
     private final SharedPreferences pref;
     private final SharedPreferences.Editor editor;

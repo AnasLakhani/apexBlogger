@@ -84,4 +84,5 @@ sadipscing elitr, sed diam nonumy eirmod</string>
     <string name="international">International</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
+    <string name="retry">Retry</string>
 </resources>

@@ -213,7 +213,7 @@
                     android:layout_height="200dp"
                     android:onClick="@{() -> onClick.onItemClick(snapshot)}"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/logo"
+                    android:src="@drawable/splash_screen_logo"
                     bind:avatar="@{model.image}" />
 
             </LinearLayout>

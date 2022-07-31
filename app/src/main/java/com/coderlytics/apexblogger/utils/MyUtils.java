@@ -19,10 +19,18 @@ import androidx.swiperefreshlayout.widget.CircularProgressDrawable;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.coderlytics.apexblogger.R;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MyUtils {
 
     private static final String TAG = "MyUtils";
+
+    public static DocumentReference getFirebase() {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+        return db.collection("settings").document("yYeumoPzvRsmrfxzZbM5");
+
+    }
 
     public static void hideKeyboard(Activity activity) {
         InputMethodManager imm = (InputMethodManager) activity.getSystemService(Activity.INPUT_METHOD_SERVICE);

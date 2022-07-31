@@ -23,7 +23,7 @@
         android:label="PopularFragments" />
     <fragment
         android:id="@+id/profileFragments"
-        android:name="com.coderlytics.apexblogger.ui.fragments.ProfileFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.MyArticlesFragment"
         android:label="ProfileFragments" />
     <fragment
         android:id="@+id/searchFragments"
