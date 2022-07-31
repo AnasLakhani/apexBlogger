@@ -21,7 +21,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.bumptech.glide.Glide;
 import com.coderlytics.apexblogger.R;
 import com.coderlytics.apexblogger.adapters.BlogAdapter;
-import com.coderlytics.apexblogger.databinding.FragmentsProfileBinding;
+import com.coderlytics.apexblogger.databinding.FragmentsMyArticleBinding;
 import com.coderlytics.apexblogger.databinding.FragmentsWriteArticlesBinding;
 import com.coderlytics.apexblogger.model.BlogsResponse;
 import com.coderlytics.apexblogger.utils.MyUtils;
@@ -46,7 +46,7 @@ import java.util.UUID;
 
 public class MyArticlesFragment extends Fragment implements BlogAdapter.OnItemClickListener {
 
-    FragmentsWriteArticlesBinding binding;
+    FragmentsMyArticleBinding binding;
 
     public static final int IMAGE_SELECT_CODE = 1001;
 
@@ -70,7 +70,7 @@ public class MyArticlesFragment extends Fragment implements BlogAdapter.OnItemCl
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        binding = FragmentsWriteArticlesBinding.inflate(inflater, container, false);
+        binding = FragmentsMyArticleBinding.inflate(inflater, container, false);
         context = binding.getRoot().getContext();
         bottomSheetDialog = new BottomSheetDialog(context);
         MyUtils.requestOptions(binding.profileImg, SpHelper.getValue(context, SpHelper.IMAGEURL));
