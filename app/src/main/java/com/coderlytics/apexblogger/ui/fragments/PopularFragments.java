@@ -16,8 +16,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.coderlytics.apexblogger.adapters.BlogAdapter;
 import com.coderlytics.apexblogger.databinding.FragmentsBlogsBinding;
-import com.coderlytics.apexblogger.databinding.FragmentsHomeBinding;
-import com.coderlytics.apexblogger.databinding.FragmentsPopularBinding;
 import com.coderlytics.apexblogger.model.BlogsResponse;
 import com.coderlytics.apexblogger.utils.MyUtils;
 import com.google.android.material.snackbar.Snackbar;
@@ -65,7 +63,7 @@ public class PopularFragments extends Fragment implements BlogAdapter.OnItemClic
 
         Query query = blogsRef.orderBy("created_at", Query.Direction.DESCENDING);
 
-        adapter = new BlogAdapter(query, PopularFragments.this,false) {
+        adapter = new BlogAdapter(query, PopularFragments.this, false) {
 
             @Override
             protected void onDataChanged() {
@@ -112,7 +110,7 @@ public class PopularFragments extends Fragment implements BlogAdapter.OnItemClic
     @Override
     public void onShareClick(DocumentSnapshot documentSnapshot) {
         BlogsResponse model = documentSnapshot.toObject(BlogsResponse.class);
-        MyUtils.share(binding.getRoot().getContext(),model.getTitle(),model.getContent());
+        MyUtils.share(binding.getRoot().getContext(), model.getTitle(), model.getContent());
     }
 
     @Override

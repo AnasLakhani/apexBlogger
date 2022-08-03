@@ -2,13 +2,8 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/homeFragments">
+    app:startDestination="@id/blogsFragments">
 
-
-    <fragment
-        android:id="@+id/homeFragments"
-        android:name="com.coderlytics.apexblogger.ui.fragments.HomeFragments"
-        android:label="HomeFragments" />
     <fragment
         android:id="@+id/categoriesFragments"
         android:name="com.coderlytics.apexblogger.ui.fragments.CategoriesFragments"
@@ -37,5 +32,9 @@
         android:id="@+id/writeArticleFragments"
         android:name="com.coderlytics.apexblogger.ui.fragments.WriteArticleFragments"
         android:label="WriteArticleFragments" />
+    <fragment
+        android:id="@+id/blogsFragments"
+        android:name="com.coderlytics.apexblogger.ui.fragments.BlogsFragments"
+        android:label="BlogsFragments" />
 
 </navigation>

@@ -30,12 +30,6 @@ public class BlogsFragments extends Fragment implements BlogAdapter.OnItemClickL
 
     FragmentsBlogsBinding binding;
 
-    String s;
-
-    public BlogsFragments(String s) {
-        this.s = s;
-    }
-
     Context context;
 
     private BlogAdapter adapter;
