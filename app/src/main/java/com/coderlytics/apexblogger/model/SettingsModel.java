@@ -9,18 +9,21 @@ public class SettingsModel {
     public String update_msg;
     public String first_time_start_app_message;
     public String term_and_condition_url;
+
+    public String getAbout_us_url() {
+        return about_us_url;
+    }
+
+    public void setAbout_us_url(String about_us_url) {
+        this.about_us_url = about_us_url;
+    }
+
+    public String about_us_url;
     public String privacy_policy_url;
     public boolean maintance_mode;
 
-    public boolean isMaintainance_mode_yasir() {
-        return maintainance_mode_yasir;
-    }
 
-    public void setMaintainance_mode_yasir(boolean maintainance_mode_yasir) {
-        this.maintainance_mode_yasir = maintainance_mode_yasir;
-    }
 
-    public boolean maintainance_mode_yasir;
     public boolean first_time_enabled;
 
     public boolean isFirst_time_enabled() {

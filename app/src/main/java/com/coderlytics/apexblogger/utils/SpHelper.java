@@ -19,6 +19,7 @@ public class SpHelper {
     public static final String ROLE = "ROLE";
     public static final String USERNAME = "USERNAME";
     public final static String TERM_AND_CONDITION_URL = "TERM_AND_CONDITION_URL";
+    public final static String ABOUT_US_URL = "ABOUT_US";
     public final static String PRIVACY_POLICY_URL = "PRIVACY_POLICY_URL";
 
 

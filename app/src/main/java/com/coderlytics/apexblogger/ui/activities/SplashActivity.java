@@ -37,12 +37,17 @@ public class SplashActivity extends AppCompatActivity {
         binding.next.setOnClickListener(view -> getBaseUrl());
 
         binding.next.performClick();
+
     }
 
     private void getBaseUrl() {
         if (isFirstTime) {
+
+            //yaha pr first time false horaha he
             spHelper.setFirstTimeLaunch(false);
-            startActivity(new Intent(SplashActivity.this, LoginActivity.class));
+
+
+            startActivity(new Intent(SplashActivity.this, OnboardingExample4Activity.class));
             finish();
             return;
         }
@@ -60,8 +65,8 @@ public class SplashActivity extends AppCompatActivity {
 
                 binding.loitte.setVisibility(View.GONE);
 
-//                if (types.isMaintance_mode()) {
-                if (types.isMaintainance_mode_yasir()) {
+                if (types.isMaintance_mode()) {
+//                if (types.isMaintainance_mode_yasir()) {
                     binding.next.setVisibility(View.VISIBLE);
                     binding.txt.setVisibility(View.VISIBLE);
                     binding.txt.setText(types.getMaintenance_message());
@@ -81,6 +86,7 @@ public class SplashActivity extends AppCompatActivity {
 
                 String PRIVACY_POLICY_URL = types.getPrivacy_policy_url();
                 String TERM_AND_CONDITION_URL = types.getTerm_and_condition_url();
+                String ABOUT_US_URL = types.getAbout_us_url();
 
 
                 //PRIVACY POLICY URL
@@ -89,6 +95,8 @@ public class SplashActivity extends AppCompatActivity {
                 //TERM AND CONDITION URL
                 SpHelper.setKey(SplashActivity.this, SpHelper.TERM_AND_CONDITION_URL, TERM_AND_CONDITION_URL);
 
+                //ABOUT US URL
+                SpHelper.setKey(SplashActivity.this, SpHelper.ABOUT_US_URL, ABOUT_US_URL);
 
                 //Not Now
                 if (spHelper.isFirstTimeLaunch() && types.isFirst_time_enabled()) {

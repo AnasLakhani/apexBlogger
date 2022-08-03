@@ -73,6 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                 addOnCompleteListener(task -> {
                     if (!task.isSuccessful()) {
                         loading_dialog.dismiss();
+                        Toast.makeText(this, "Invalid User", Toast.LENGTH_SHORT).show();
                         return;
                     }
 
@@ -109,6 +110,7 @@ public class LoginActivity extends AppCompatActivity {
 
                         Toast.makeText(LoginActivity.this, "Authentication Success", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                        finish();
 
                     }).addOnFailureListener(e -> {
                         loading_dialog.dismiss();

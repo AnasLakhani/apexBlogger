@@ -41,7 +41,7 @@ class OnboardingExample4Activity : AppCompatActivity() {
         btnNext.setOnClickListener {
             if (getItem() > mViewPager.childCount) {
                 startActivity(Intent(this
-                ,HomeActivity::class.java))
+                ,LoginActivity::class.java))
                 finish()
             } else {
                 mViewPager.setCurrentItem(getItem() + 1, true)
@@ -50,7 +50,7 @@ class OnboardingExample4Activity : AppCompatActivity() {
 
         btnBack.setOnClickListener {
             startActivity(Intent(this
-                ,HomeActivity::class.java))
+                ,LoginActivity::class.java))
             finish()
         }
     }
