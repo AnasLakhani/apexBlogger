@@ -24,6 +24,7 @@ import com.coderlytics.apexblogger.adapters.BlogAdapter;
 import com.coderlytics.apexblogger.databinding.FragmentsMyArticleBinding;
 import com.coderlytics.apexblogger.databinding.FragmentsWriteArticlesBinding;
 import com.coderlytics.apexblogger.model.BlogsResponse;
+import com.coderlytics.apexblogger.ui.activities.HireActivity;
 import com.coderlytics.apexblogger.utils.MyUtils;
 import com.coderlytics.apexblogger.utils.SpHelper;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -88,6 +89,11 @@ public class MyArticlesFragment extends Fragment implements BlogAdapter.OnItemCl
 
 //        binding.txt.setText("FragmentsProfileBinding");
         return binding.getRoot();
+    }
+
+    @Override
+    public void onHireClick(DocumentSnapshot documentSnapshot) {
+        startActivity(new Intent(requireActivity(), HireActivity.class));
     }
 
     private void setUpRecyclerView() {

@@ -39,6 +39,8 @@ public class BlogAdapter extends FirestoreAdapter<BlogAdapter.MyRecyclerViewHold
 
         void onItemClick(DocumentSnapshot documentSnapshot);
 
+        void onHireClick(DocumentSnapshot documentSnapshot);
+
     }
 
     protected BlogAdapter(Query query, OnItemClickListener listener,boolean isProfile) {

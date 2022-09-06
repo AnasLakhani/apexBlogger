@@ -148,6 +148,7 @@ public class WriteArticleFragments extends Fragment {
 
         loading_dialog.show();
 
+        //IF USER DONT ENTER IMAGE
         if (image_uri == null) {
             setdata(null);
             return;

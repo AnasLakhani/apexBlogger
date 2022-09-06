@@ -2,6 +2,7 @@ package com.coderlytics.apexblogger.ui.activities;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -130,5 +131,10 @@ public class BlogActivity extends AppCompatActivity implements BlogAdapter.OnIte
     @Override
     public void onItemClick(DocumentSnapshot documentSnapshot) {
         Toast.makeText(context, "Item Click", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onHireClick(DocumentSnapshot documentSnapshot) {
+        startActivity(new Intent(this,HireActivity.class));
     }
 }

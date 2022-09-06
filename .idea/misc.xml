@@ -70,12 +70,13 @@
         <entry key="app/src/main/res/layout/fragments_bookmarks.xml" value="0.1203125" />
         <entry key="app/src/main/res/layout/fragments_categories.xml" value="0.2605316162109375" />
         <entry key="app/src/main/res/layout/fragments_home.xml" value="0.1203125" />
+        <entry key="app/src/main/res/layout/fragments_my_article.xml" value="0.22311553955078128" />
         <entry key="app/src/main/res/layout/fragments_popular.xml" value="0.1203125" />
         <entry key="app/src/main/res/layout/fragments_profile.xml" value="0.17679595947265622" />
         <entry key="app/src/main/res/layout/fragments_search.xml" value="0.20111083984375" />
         <entry key="app/src/main/res/layout/fragments_settings.xml" value="0.19766998291015625" />
         <entry key="app/src/main/res/layout/fragments_write_articles.xml" value="0.2324005126953125" />
-        <entry key="app/src/main/res/layout/layout_blogs.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/layout_blogs.xml" value="0.6897583007812501" />
         <entry key="app/src/main/res/layout/layout_cateogries.xml" value="0.26614583333333336" />
         <entry key="app/src/main/res/layout/layout_loading_dialog.xml" value="0.3422053019205729" />
         <entry key="app/src/main/res/layout/layout_toolbar.xml" value="0.23958333333333334" />

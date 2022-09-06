@@ -2,6 +2,7 @@ package com.coderlytics.apexblogger.ui.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -22,6 +23,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.coderlytics.apexblogger.adapters.BlogAdapter;
 import com.coderlytics.apexblogger.databinding.FragmentsSearchBinding;
 import com.coderlytics.apexblogger.model.BlogsResponse;
+import com.coderlytics.apexblogger.ui.activities.HireActivity;
 import com.coderlytics.apexblogger.utils.MyUtils;
 import com.coderlytics.apexblogger.utils.SpHelper;
 import com.google.android.material.snackbar.Snackbar;
@@ -90,6 +92,11 @@ public class SearchFragments extends Fragment implements BlogAdapter.OnItemClick
     private void search(String query) {
         setUpRecyclerView(query);
         adapter.startListening();
+    }
+
+    @Override
+    public void onHireClick(DocumentSnapshot documentSnapshot) {
+        startActivity(new Intent(requireActivity(), HireActivity.class));
     }
 
     private void setUpRecyclerView(String q) {

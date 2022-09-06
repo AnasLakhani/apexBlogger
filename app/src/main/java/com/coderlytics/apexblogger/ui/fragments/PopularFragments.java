@@ -2,6 +2,7 @@ package com.coderlytics.apexblogger.ui.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.coderlytics.apexblogger.adapters.BlogAdapter;
 import com.coderlytics.apexblogger.databinding.FragmentsBlogsBinding;
 import com.coderlytics.apexblogger.model.BlogsResponse;
+import com.coderlytics.apexblogger.ui.activities.HireActivity;
 import com.coderlytics.apexblogger.utils.MyUtils;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.firestore.CollectionReference;
@@ -59,6 +61,11 @@ public class PopularFragments extends Fragment implements BlogAdapter.OnItemClic
         return binding.getRoot();
     }
 
+
+    @Override
+    public void onHireClick(DocumentSnapshot documentSnapshot) {
+        startActivity(new Intent(requireActivity(), HireActivity.class));
+    }
     private void setUpRecyclerView() {
 
         Query query = blogsRef.orderBy("created_at", Query.Direction.DESCENDING);
