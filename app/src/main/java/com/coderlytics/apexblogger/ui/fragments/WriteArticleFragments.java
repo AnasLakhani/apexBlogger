@@ -52,6 +52,8 @@ public class WriteArticleFragments extends Fragment {
 
     private static final String TAG = "WriteArticleFragments";
 
+
+
     private Uri image_uri;
 
     private int GALLERY = 1;
